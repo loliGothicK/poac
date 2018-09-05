@@ -392,7 +392,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h2 id="installation">Installation</h2>
+<h3 id="easy-install">Easy install</h3>
+<pre><code class="lang-bash">curl https://sh.poac.pm | sh
+</code></pre>
+<p><em>When your OS is macOS, use <a href="https://github.com/Homebrew/brew" target="_blank">Homebrew</a></em></p>
+<h3 id="manual-build">Manual (Build)</h3>
+<p>Poac requires the following tools and packages to build:</p>
+<ul>
+<li><code>boost</code>: version <code>1.48.0</code> or higher</li>
+<li><code>cmake</code>: version ``</li>
+<li><code>curl(libcurl)</code>:</li>
+<li>openssl</li>
+<li><code>yaml-cpp</code>:</li>
+</ul>
+<pre><code class="lang-bash">$ git <span class="hljs-built_in">clone</span> https://github.com/poacpm/poac.git
+$ <span class="hljs-built_in">cd</span> poac
+$ mkdir build &amp;&amp; <span class="hljs-built_in">cd</span> <span class="hljs-variable">$_</span>
+$ cmake ..
+$ make
+$ make install
+</code></pre>
+<p>Already poac is installed, you can build using poac:</p>
+<pre><code class="lang-bash">$ poac build --release
+</code></pre>
+
                                 
                                 </section>
                             
@@ -435,7 +459,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.1. Installation","level":"1.2.1","depth":2,"next":{"title":"1.2. Hello World","level":"1.2.2","depth":2,"path":"getting-started/hello-world.md","ref":"getting-started/hello-world.md","articles":[]},"previous":{"title":"1. Getting Started","level":"1.2","depth":1,"path":"getting-started/README.md","ref":"getting-started/README.md","articles":[{"title":"1.1. Installation","level":"1.2.1","depth":2,"path":"getting-started/installation.md","ref":"getting-started/installation.md","articles":[]},{"title":"1.2. Hello World","level":"1.2.2","depth":2,"path":"getting-started/hello-world.md","ref":"getting-started/hello-world.md","articles":[]}]},"dir":"neutral"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Poac Documents","language":"en","gitbook":"*"},"file":{"path":"getting-started/installation.md","mtime":"2018-09-05T17:11:01.458Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-05T17:11:58.342Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"1.1. Installation","level":"1.2.1","depth":2,"next":{"title":"1.2. Hello World","level":"1.2.2","depth":2,"path":"getting-started/hello-world.md","ref":"getting-started/hello-world.md","articles":[]},"previous":{"title":"1. Getting Started","level":"1.2","depth":1,"path":"getting-started/README.md","ref":"getting-started/README.md","articles":[{"title":"1.1. Installation","level":"1.2.1","depth":2,"path":"getting-started/installation.md","ref":"getting-started/installation.md","articles":[]},{"title":"1.2. Hello World","level":"1.2.2","depth":2,"path":"getting-started/hello-world.md","ref":"getting-started/hello-world.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Poac Documents","language":"en","gitbook":"*"},"file":{"path":"getting-started/installation.md","mtime":"2018-09-05T22:41:57.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-05T22:42:48.561Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>

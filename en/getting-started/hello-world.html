@@ -392,8 +392,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="getting-started">Getting Started</h1>
-<h2 id="hello-world">Hello World</h2>
+                                <h2 id="hello-world">Hello World</h2>
+<p>To start a new project with poac, use <code>poac new</code>:</p>
 <pre><code class="lang-bash">$ poac new hello_world
 
 Your <span class="hljs-string">&quot;hello_world&quot;</span> project was created successfully.
@@ -403,22 +403,31 @@ Go into your project by running:
     $ <span class="hljs-built_in">cd</span> hello_world
 
 Start your project with:
-    $ poac install hello_world
-    $ poac run main.cpp
+    $ poac install
+    $ poac run
 </code></pre>
-<p>poac use <code>poac.yml</code> as setting file.</p>
-<pre><code class="lang-yaml:poac.yml"># This is a comment.
-name: sample
-version: 0.0.1
-cpp_version: &quot;&quot;
-description: &quot;This is a Sample file.&quot;
-authors:
-  - &quot;good author&quot;
-license: ISC
-links:
-  - GitHub: https://github.com
-deps:
-  - hello_world: 1.0.0
+<p>Check out to project directory.</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> hello_world
+$ tree .
+.
+&#x251C;&#x2500;&#x2500; poac.yml
+&#x2514;&#x2500;&#x2500; main.cpp
+
+0 directory, 2 files
+</code></pre>
+<p><code>poac.yml</code> is the settings file.</p>
+<p>Poac generated a &#x201C;hello_world&#x201D; binary for us. Let&#x2019;s compile it:</p>
+<pre><code class="lang-bash">$ poac build
+Compiled: Output to `_build/bin/hello_world`
+
+$ ./_build/bin/hello_world
+Hello, world!
+</code></pre>
+<p>We can also use <code>poac run</code> to compile and then run it, all in one step:</p>
+<pre><code class="lang-bash">$ poac run
+Compiled: Output to `_build/bin/hello_world`
+Running: `_build/bin/hello_world`
+Hello, world!
 </code></pre>
 
                                 
@@ -463,7 +472,7 @@ deps:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.2. Hello World","level":"1.2.2","depth":2,"next":{"title":"2. Guide","level":"1.3","depth":1,"path":"guide/README.md","ref":"guide/README.md","articles":[{"title":"2.1. Creating a New Project","level":"1.3.1","depth":2,"path":"guide/creating-a-new-project.md","ref":"guide/creating-a-new-project.md","articles":[]},{"title":"2.2. Introduce to Existing Projects","level":"1.3.2","depth":2,"path":"guide/introduce-to-existing-projects.md","ref":"guide/introduce-to-existing-projects.md","articles":[]},{"title":"2.3. Look Output of Help Option","level":"1.3.3","depth":2,"path":"guide/look-output-of-help-option.md","ref":"guide/look-output-of-help-option.md","articles":[]}]},"previous":{"title":"1.1. Installation","level":"1.2.1","depth":2,"path":"getting-started/installation.md","ref":"getting-started/installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Poac Documents","language":"en","gitbook":"*"},"file":{"path":"getting-started/hello-world.md","mtime":"2018-09-05T17:11:01.458Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-05T17:11:58.342Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"1.2. Hello World","level":"1.2.2","depth":2,"next":{"title":"2. Guide","level":"1.3","depth":1,"path":"guide/README.md","ref":"guide/README.md","articles":[{"title":"2.1. Creating a New Project","level":"1.3.1","depth":2,"path":"guide/creating-a-new-project.md","ref":"guide/creating-a-new-project.md","articles":[]},{"title":"2.2. Introduce to Existing Projects","level":"1.3.2","depth":2,"path":"guide/introduce-to-existing-projects.md","ref":"guide/introduce-to-existing-projects.md","articles":[]},{"title":"2.3. Look Output of Help Option","level":"1.3.3","depth":2,"path":"guide/look-output-of-help-option.md","ref":"guide/look-output-of-help-option.md","articles":[]}]},"previous":{"title":"1.1. Installation","level":"1.2.1","depth":2,"path":"getting-started/installation.md","ref":"getting-started/installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Poac Documents","language":"en","gitbook":"*"},"file":{"path":"getting-started/hello-world.md","mtime":"2018-09-05T22:41:57.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-05T22:42:48.561Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
