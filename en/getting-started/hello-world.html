@@ -403,20 +403,22 @@ Go into your project by running:
     $ <span class="hljs-built_in">cd</span> hello_world
 
 Start your project with:
-    $ poac install
     $ poac run
 </code></pre>
 <p>Check out to project directory.</p>
 <pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> hello_world
-$ tree .
+$ tree . <span class="hljs-_">-a</span>
 .
-&#x251C;&#x2500;&#x2500; poac.yml
-&#x2514;&#x2500;&#x2500; main.cpp
+&#x251C;&#x2500;&#x2500; .gitignore
+&#x251C;&#x2500;&#x2500; README.md
+&#x251C;&#x2500;&#x2500; main.cpp
+&#x2514;&#x2500;&#x2500; poac.yml
 
-0 directory, 2 files
+0 directories, 4 files
 </code></pre>
-<p><code>poac.yml</code> is the settings file.</p>
-<p>Poac generated a &#x201C;hello_world&#x201D; binary for us. Let&#x2019;s compile it:</p>
+<p><code>poac.yml</code> is the settings file.
+Please refer to <a href="../guide/setting-file.md">setting-file</a> for details on how to write the setting file.</p>
+<p>Poac generates a &#x201C;hello_world&#x201D; binary for us, when you execute <code>poac build</code>:</p>
 <pre><code class="lang-bash">$ poac build
 Compiled: Output to `_build/bin/hello_world`
 
@@ -472,7 +474,7 @@ Hello, world!
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.2. Hello World","level":"1.2.2","depth":2,"next":{"title":"2. Guide","level":"1.3","depth":1,"path":"guide/README.md","ref":"guide/README.md","articles":[{"title":"2.1. Creating a New Project","level":"1.3.1","depth":2,"path":"guide/creating-a-new-project.md","ref":"guide/creating-a-new-project.md","articles":[]},{"title":"2.2. Introduce to Existing Projects","level":"1.3.2","depth":2,"path":"guide/introduce-to-existing-projects.md","ref":"guide/introduce-to-existing-projects.md","articles":[]},{"title":"2.3. Look Output of Help Option","level":"1.3.3","depth":2,"path":"guide/look-output-of-help-option.md","ref":"guide/look-output-of-help-option.md","articles":[]}]},"previous":{"title":"1.1. Installation","level":"1.2.1","depth":2,"path":"getting-started/installation.md","ref":"getting-started/installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Poac Documents","language":"en","gitbook":"*"},"file":{"path":"getting-started/hello-world.md","mtime":"2018-09-30T18:56:20.171Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-30T18:57:06.913Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"1.2. Hello World","level":"1.2.2","depth":2,"next":{"title":"2. Guide","level":"1.3","depth":1,"path":"guide/README.md","ref":"guide/README.md","articles":[{"title":"2.1. Creating a New Project","level":"1.3.1","depth":2,"path":"guide/creating-a-new-project.md","ref":"guide/creating-a-new-project.md","articles":[]},{"title":"2.2. Introduce to Existing Projects","level":"1.3.2","depth":2,"path":"guide/introduce-to-existing-projects.md","ref":"guide/introduce-to-existing-projects.md","articles":[]},{"title":"2.3. Look Output of Help Option","level":"1.3.3","depth":2,"path":"guide/look-output-of-help-option.md","ref":"guide/look-output-of-help-option.md","articles":[]}]},"previous":{"title":"1.1. Installation","level":"1.2.1","depth":2,"path":"getting-started/installation.md","ref":"getting-started/installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Poac Documents","language":"en","gitbook":"*"},"file":{"path":"getting-started/hello-world.md","mtime":"2018-09-30T23:12:38.198Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-30T23:13:33.949Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
