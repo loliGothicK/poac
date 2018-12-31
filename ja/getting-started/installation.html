@@ -178,9 +178,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../guide/introduce-poac-to-existing-projects.html">
+        <li class="chapter " data-level="1.3.2" data-path="../guide/introduce-poac-to-existing-projects.md">
             
-                <a href="../guide/introduce-poac-to-existing-projects.html">
+                <span>
             
                     
                     2.2. Introduce poac to Existing Projects
@@ -325,9 +325,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6" data-path="../future/">
+        <li class="chapter " data-level="1.6" data-path="../future/README.md">
             
-                <a href="../future/">
+                <span>
             
                     
                     5. Future
@@ -383,19 +383,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="installation">Installation</h2>
+                                <h2 id="&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;">&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;</h2>
 <h3 id="&#x7C21;&#x5358;&#x306B;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;">&#x7C21;&#x5358;&#x306B;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;</h3>
-<pre><code class="lang-bash">curl https://sh.poac.pm | bash
+<pre><code class="lang-bash">curl -fsSL https://sh.poac.pm | bash
 </code></pre>
 <p><em>&#x304A;&#x4F7F;&#x3044;&#x306E;PC&#x306E;OS&#x304C;macOS&#x306E;&#x6642;&#x3001;&#x5185;&#x90E8;&#x3067;&#x306F; <a href="https://github.com/Homebrew/brew" target="_blank">Homebrew</a> &#x3092;&#x4F7F;&#x7528;&#x3057;&#x307E;&#x3059;</em></p>
 <h3 id="&#x624B;&#x52D5;&#x3067;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;-&#x30D3;&#x30EB;&#x30C9;">&#x624B;&#x52D5;&#x3067;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B; (&#x30D3;&#x30EB;&#x30C9;)</h3>
 <p>poac &#x306F;&#x30D3;&#x30EB;&#x30C9;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x4EE5;&#x4E0B;&#x306E;&#x30C4;&#x30FC;&#x30EB;&#x3068;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x304C;&#x5FC5;&#x8981;&#x3067;&#x3059;:</p>
 <ul>
-<li><code>boost</code>: version <code>1.48.0</code> &#x3082;&#x3057;&#x304F;&#x306F;&#x305D;&#x308C;&#x4EE5;&#x4E0A;</li>
-<li><code>cmake</code>: version ``</li>
-<li><code>curl(libcurl)</code>:</li>
-<li>openssl</li>
-<li><code>yaml-cpp</code>:</li>
+<li><a href="https://github.com/boostorg" target="_blank"><code>boost</code></a>: <code>1.48.0</code> &#x3082;&#x3057;&#x304F;&#x306F;&#x305D;&#x308C;&#x4EE5;&#x4E0A;</li>
+<li><a href="https://github.com/Kitware/CMake" target="_blank"><code>cmake</code></a>: <code>3.0</code> &#x3082;&#x3057;&#x304F;&#x306F;&#x305D;&#x308C;&#x4EE5;&#x4E0A;</li>
+<li><a href="https://github.com/curl/curl" target="_blank"><code>libcurl</code></a>: <code>7.63.0</code> &#x3082;&#x3057;&#x304F;&#x306F;&#x305D;&#x308C;&#x4EE5;&#x4E0A;</li>
+<li><a href="https://www.libressl.org" target="_blank"><code>libressl</code></a>: <code>2.6.5</code> &#x3082;&#x3057;&#x304F;&#x306F;&#x305D;&#x308C;&#x4EE5;&#x4E0A;</li>
+<li><a href="https://github.com/jbeder/yaml-cpp" target="_blank"><code>yaml-cpp</code></a>: <code>0.6.0</code> &#x3082;&#x3057;&#x304F;&#x306F;&#x305D;&#x308C;&#x4EE5;&#x4E0A;</li>
+<li><a href="https://github.com/CVC4/CVC4" target="_blank"><code>CVC4</code></a>: <code>1.6</code> &#x3082;&#x3057;&#x304F;&#x306F;&#x305D;&#x308C;&#x4EE5;&#x4E0A;</li>
 </ul>
 <pre><code class="lang-bash">$ git <span class="hljs-built_in">clone</span> https://github.com/poacpm/poac.git
 $ <span class="hljs-built_in">cd</span> poac
@@ -407,6 +408,17 @@ $ make install
 <p>&#x65E2;&#x306B; poac &#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x6E08;&#x307F;&#x3067;&#x3042;&#x308C;&#x3070;&#x3001;poac &#x3092;&#x4F7F;&#x7528;&#x3057;&#x3066;&#x30D3;&#x30EB;&#x30C9;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x53EF;&#x80FD;&#x3067;&#x3059;:</p>
 <pre><code class="lang-bash">$ poac build
 </code></pre>
+<hr>
+<h3 id="&#x30D3;&#x30EB;&#x30C9;&#x6E08;&#x307F;&#x30D0;&#x30A4;&#x30CA;&#x30EA;">&#x30D3;&#x30EB;&#x30C9;&#x6E08;&#x307F;&#x30D0;&#x30A4;&#x30CA;&#x30EA;</h3>
+<p>poac&#x306F;&#x3001;&#x57FA;&#x672C;&#x7684;&#x306B;&#x30D3;&#x30EB;&#x30C9;&#x6E08;&#x307F;&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x3067;&#x914D;&#x5E03;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
+&#x3053;&#x308C;&#x3089;&#x306E;&#x64CD;&#x4F5C;&#x306F;&#x672C;&#x6765;&#x30E6;&#x30FC;&#x30B6;&#x30FC;&#x304C;&#x95A2;&#x77E5;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;
+&#x30B7;&#x30A7;&#x30EB;&#x30B9;&#x30AF;&#x30EA;&#x30D7;&#x30C8;&#x3067;&#x306E;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3092;&#x671B;&#x307E;&#x306A;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;
+&#x30D3;&#x30EB;&#x30C9;&#x6E08;&#x307F;&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x3092;&#x76F4;&#x63A5;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
+<p>macOS&#x306B;&#x5BFE;&#x3057;&#x3066;&#x306F;&#x3001;homebrew&#x306E;bottle&#x306B;&#x3088;&#x3063;&#x3066;&#x30D3;&#x30EB;&#x30C9;&#x6E08;&#x307F;&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x304C;&#x914D;&#x5E03;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;
+&#x305D;&#x308C;&#x4EE5;&#x5916;&#x306E;OS&#x306B;&#x5BFE;&#x3057;&#x3066;&#x306F;&#x3001;CircleCI&#x4E0A;&#x3067;&#x5404;&#x30A2;&#x30FC;&#x30AD;&#x30C6;&#x30AF;&#x30C1;&#x30E3;&#x3054;&#x3068;&#x306E;&#x30D3;&#x30EB;&#x30C9;&#x6E08;&#x307F;&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x3092;&#x751F;&#x6210;&#x3057;&#x3001;
+&#x305D;&#x308C;&#x3089;&#x3092;&#x914D;&#x5E03;&#x3057;&#x307E;&#x3059;&#x3002;
+&#x305D;&#x308C;&#x3089;&#x306F;GitHub release&#x306B;&#x914D;&#x7F6E;&#x3055;&#x308C;&#x308B;&#x305F;&#x3081;&#x3001;
+<a href="https://github.com/poacpm/poac/releases" target="_blank">&#x305D;&#x3053;</a>&#x304B;&#x3089;&#x30C0;&#x30A6;&#x30F3;&#x30ED;&#x30FC;&#x30C9;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;</p>
 
                                 
                                 </section>
@@ -450,7 +462,7 @@ $ make install
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.1. Installation","level":"1.2.1","depth":2,"next":{"title":"1.2. Hello World","level":"1.2.2","depth":2,"path":"getting-started/hello-world.md","ref":"getting-started/hello-world.md","articles":[]},"previous":{"title":"1. Getting Started","level":"1.2","depth":1,"path":"getting-started/README.md","ref":"getting-started/README.md","articles":[{"title":"1.1. Installation","level":"1.2.1","depth":2,"path":"getting-started/installation.md","ref":"getting-started/installation.md","articles":[]},{"title":"1.2. Hello World","level":"1.2.2","depth":2,"path":"getting-started/hello-world.md","ref":"getting-started/hello-world.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Poac Book","language":"ja","gitbook":"*"},"file":{"path":"getting-started/installation.md","mtime":"2018-12-19T18:13:05.229Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-19T18:13:36.967Z"},"basePath":"..","book":{"language":"ja"}});
+            gitbook.page.hasChanged({"page":{"title":"1.1. Installation","level":"1.2.1","depth":2,"next":{"title":"1.2. Hello World","level":"1.2.2","depth":2,"path":"getting-started/hello-world.md","ref":"getting-started/hello-world.md","articles":[]},"previous":{"title":"1. Getting Started","level":"1.2","depth":1,"path":"getting-started/README.md","ref":"getting-started/README.md","articles":[{"title":"1.1. Installation","level":"1.2.1","depth":2,"path":"getting-started/installation.md","ref":"getting-started/installation.md","articles":[]},{"title":"1.2. Hello World","level":"1.2.2","depth":2,"path":"getting-started/hello-world.md","ref":"getting-started/hello-world.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Poac Book","language":"ja","gitbook":"*"},"file":{"path":"getting-started/installation.md","mtime":"2018-12-31T00:25:37.992Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-31T00:26:04.144Z"},"basePath":"..","book":{"language":"ja"}});
         });
     </script>
 </div>
