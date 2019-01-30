@@ -1,0 +1,667 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.3. 設定ファイル · The Poac Book</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="introduce-to-existing-projects.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索すると入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting-started/">
+            
+                <a href="../getting-started/">
+            
+                    
+                    1. 入門
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../getting-started/installation.html">
+            
+                <a href="../getting-started/installation.html">
+            
+                    
+                    1.1. インストール
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../getting-started/hello-world.html">
+            
+                <a href="../getting-started/hello-world.html">
+            
+                    
+                    1.2. Hello World
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2. ガイド
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="creating-a-new-project.html">
+            
+                <a href="creating-a-new-project.html">
+            
+                    
+                    2.1. 新しいプロジェクトの作成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="introduce-to-existing-projects.html">
+            
+                <a href="introduce-to-existing-projects.html">
+            
+                    
+                    2.2. 既存のプロジェクトに使用する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="setting-file.html">
+            
+                <a href="setting-file.html">
+            
+                    
+                    2.3. 設定ファイル
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBookで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.3. 設定ファイル</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;">&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;</h2>
+<p>&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3068;&#x306F;&#x3001;poac&#x304C;&#x6271;&#x3046;poac.yml&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306E;&#x3053;&#x3068;&#x3067;&#x3001;
+&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304C;&#x5BFE;&#x5FDC;&#x3057;&#x3066;&#x3044;&#x308B;&#x30AD;&#x30FC;&#x306F;&#x4EE5;&#x4E0B;&#x306B;&#x793A;&#x3059;&#x901A;&#x308A;&#x3067;&#x3059;&#x3002;</p>
+<pre><code class="lang-elm"><span class="hljs-title">name</span> : <span class="hljs-type">String</span>
+<span class="hljs-title">version</span> : <span class="hljs-type">String</span>
+<span class="hljs-title">cpp_version</span> : <span class="hljs-type">Int</span> (<span class="hljs-number">98</span>, <span class="hljs-number">03</span>, <span class="hljs-number">11</span>(<span class="hljs-type">Include</span> <span class="hljs-type">TR1</span>), <span class="hljs-number">14</span>, <span class="hljs-number">17</span>, <span class="hljs-number">20</span>)
+<span class="hljs-title">description</span> : <span class="hljs-type">String</span>
+<span class="hljs-title">owners</span> : <span class="hljs-type">List</span> <span class="hljs-type">String</span>
+<span class="hljs-title">license</span> : <span class="hljs-type">String</span>
+<span class="hljs-title">links</span>:
+  github : <span class="hljs-type">Url</span>
+  homepage : <span class="hljs-type">Url</span>
+<span class="hljs-title">deps</span> : <span class="hljs-type">Deps</span>
+<span class="hljs-title">build</span> : <span class="hljs-type">Build</span>
+<span class="hljs-title">test</span> : <span class="hljs-type">Test</span>
+</code></pre>
+<p>&#x57FA;&#x672C;&#x7684;&#x306B;&#x5168;&#x3066;&#x66F8;&#x304F;&#x5FC5;&#x8981;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;
+<em>&#x3053;&#x308C;&#x3089;&#x306E; key &#x4EE5;&#x5916;&#x3092;&#x8A18;&#x8FF0;&#x3057;&#x3066;&#x3082;&#x30A8;&#x30E9;&#x30FC;&#x306B;&#x306F;&#x306A;&#x308A;&#x307E;&#x305B;&#x3093;&#x304C;&#x3001;<strong>JSON&#x3068;&#x9055;&#x3063;&#x3066;</strong>&#x30B3;&#x30E1;&#x30F3;&#x30C8;&#x304C;&#x66F8;&#x3051;&#x308B;&#x305F;&#x3081;&#x6975;&#x529B;&#x305D;&#x3061;&#x3089;&#x3092;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x306E;&#x304C;&#x826F;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;</em></p>
+<p>&#x307E;&#x305F;&#x3001;&#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x304C;&#x5FC5;&#x8981;&#x3068;&#x3059;&#x308B; key &#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x901A;&#x308A;&#x3067;&#x3059;&#x3002;
+&#x305D;&#x306E;&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x5B9F;&#x884C;&#x6642;&#x306B;&#x5FC5;&#x8981;&#x3068;&#x3055;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#x5834;&#x5408;&#x306F;&#x5B58;&#x5728;&#x306E;&#x30C1;&#x30A7;&#x30C3;&#x30AF;&#x306F;&#x884C;&#x308F;&#x308C;&#x307E;&#x305B;&#x3093;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:center">name</th>
+<th style="text-align:center">version</th>
+<th style="text-align:center">cpp_version</th>
+<th style="text-align:center">description</th>
+<th style="text-align:center">license</th>
+<th style="text-align:center">links</th>
+<th style="text-align:center">deps</th>
+<th style="text-align:center">build</th>
+<th style="text-align:center">test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">build</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">cache</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">cleanup</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">graph</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">init</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">install</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">login</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">new</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">publish</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25B3;</td>
+<td style="text-align:center">&#x25B3;</td>
+<td style="text-align:center">&#x25B3;</td>
+<td style="text-align:center">&#x25B3;</td>
+<td style="text-align:center">&#x25B3;</td>
+</tr>
+<tr>
+<td style="text-align:left">root</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">run</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">search</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">test</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#x25EF;</td>
+</tr>
+<tr>
+<td style="text-align:left">uninstall</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+<tr>
+<td style="text-align:left">update</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#x25EF;</td>
+<td style="text-align:center">&#xD7;</td>
+<td style="text-align:center">&#xD7;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x25EF; ... &#x7121;&#x3051;&#x308C;&#x3070;&#x30A8;&#x30E9;&#x30FC;
+&#x25B3; ... &#x3042;&#x308C;&#x3070;&#x8AAD;&#x307F;&#x8FBC;&#x3080;
+&#xD7; ... &#x5B8C;&#x5168;&#x306B;&#x7121;&#x8996;&#x3055;&#x308C;&#x308B;</p>
+<h4 id="deps">deps</h4>
+<p>deps&#x306F;&#xFF0C;dependencies&#x306E;&#x7565;&#x3067;&#x4F9D;&#x5B58;&#x95A2;&#x4FC2;&#x3068;&#x3044;&#x3046;&#x610F;&#x5473;&#x3067;&#x3059;&#x3002;
+&#x73FE;&#x5728;&#x306E;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x6271;&#x3044;&#x305F;&#x3044;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x307E;&#x3059;&#x3002;
+deps &#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x6307;&#x5B9A;&#x306B;&#x306F;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x6F14;&#x7B97;&#x5B50;&#x304C;&#x4F7F;&#x7528;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x7B49;&#x5024;:</p>
+<ul>
+<li>&quot;0.1.0&quot;: &#x7B49;&#x3057;&#x3044;</li>
+</ul>
+<p>&#x4E0D;&#x7B49;&#x4FA1;&#x6F14;&#x7B97;&#x5B50;(<code>!=</code>&#x7B49;)&#x306E;&#x63D0;&#x4F9B;&#x304C;&#x306A;&#x3044;&#x306E;&#x306F;&#xFF0C;&#x4E00;&#x3064;&#x3060;&#x3051;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3092;&#x62D2;&#x5426;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x307E;&#x305A;&#x7121;&#x3044;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;
+&#x5927;&#x6982;&#x306F;&#x3042;&#x308B;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x4EE5;&#x4E0B;&#x3092;&#x4F7F;&#x7528;&#x3057;&#x305F;&#x304F;&#x7121;&#x3044;&#x5834;&#x5408;&#x304C;&#x591A;&#x3044;&#x305F;&#x3081;&#xFF0C;&#x305D;&#x308C;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x6BD4;&#x8F03;&#x6F14;&#x7B97;&#x5B50;&#x3067;&#x89E3;&#x6C7A;&#x53EF;&#x80FD;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x6BD4;&#x8F03;&#x6F14;&#x7B97;&#x5B50;:</p>
+<ul>
+<li>&quot;&gt;=0.1.0&quot;: &#x4EE5;&#x4E0A;</li>
+<li>&quot;&lt;=0.1.0&quot;: &#x4EE5;&#x4E0B;</li>
+<li>&quot;&gt;0.1.0&quot;: &#x3088;&#x308A;&#x5927;&#x304D;&#x3044;</li>
+<li>&quot;&lt;0.1.0&quot;: &#x3088;&#x308A;&#x5C0F;&#x3055;&#x3044;</li>
+</ul>
+<p>&#x4E0A;&#x306B;&#x793A;&#x3059;&#x6F14;&#x7B97;&#x5B50;&#x306F;&#xFF0C;&#x3053;&#x306E;&#x5F8C;&#x306B;&#x793A;&#x3059;&#x6F14;&#x7B97;&#x5B50;&#x3088;&#x308A;<strong>&#x512A;&#x5148;&#x9806;&#x4F4D;&#x304C;&#x9AD8;&#x3044;</strong>&#x3067;&#x3059;&#x3002;
+&#x305D;&#x3057;&#x3066;&#xFF0C;&#x6BD4;&#x8F03;&#x6F14;&#x7B97;&#x5B50;&#x306F;&#x5FC5;&#x305A;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3068;&#x306E;&#x7A7A;&#x767D;&#x304C;&#x7121;&#x3044;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x8AD6;&#x7406;&#x6F14;&#x7B97;&#x5B50;:</p>
+<ul>
+<li>&quot;&gt;=0.1.0 and &lt;0.3.0&quot;: 0.1.0&#x4EE5;&#x4E0A;&#x3067;&#x304B;&#x3064;0.3.0&#x3088;&#x308A;&#x5C0F;&#x3055;&#x3044;</li>
+</ul>
+<p>&#x8AD6;&#x7406;&#x6F14;&#x7B97;&#x5B50;&#x306E;&#x5834;&#x5408;&#x306E;&#x307F;&#x3002;&#x5DE6;&#x53F3;&#x306B;&#x7A7A;&#x767D;&#x304C;&#x306A;&#x3044;&#x3068;&#x30D1;&#x30FC;&#x30B9;&#x30A8;&#x30E9;&#x30FC;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<p><code>or</code>&#x306E;&#x63D0;&#x4F9B;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;
+&#x306A;&#x305C;&#x306A;&#x3089;&#x3001;<code>or</code>&#x304C;&#x5FC5;&#x8981;&#x306B;&#x306A;&#x308B;&#x3088;&#x3046;&#x306A;&#x5947;&#x5999;&#x306A;&#x4F9D;&#x5B58;&#x6027;&#x3092;&#x6301;&#x3064;&#x524D;&#x306B;&#x3001;&#x3082;&#x3046;&#x4E00;&#x5EA6;&#x898B;&#x76F4;&#x3059;&#x3079;&#x304D;&#x3060;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;
+&#x305D;&#x308C;&#x306B;&#x52A0;&#x3048;&#x3001;&#x7B49;&#x5024;&#x5F0F;&#x3068;&#x6BD4;&#x8F03;&#x6F14;&#x7B97;&#x5F0F;&#x3092;&#x8AD6;&#x7406;&#x6F14;&#x7B97;&#x5B50;&#x3067;&#x7D50;&#x5408;&#x3067;&#x304D;&#x307E;&#x305B;&#x3093;&#x3002;
+&#x305D;&#x308C;&#x3082;&#x307E;&#x305F;&#x3001;&#x5FC5;&#x8981;&#x306E;&#x306A;&#x3044;&#x4F9D;&#x5B58;&#x6027;&#x306B;&#x306A;&#x308B;&#x305F;&#x3081;&#x3067;&#x3059;&#x3002;</p>
+<p>&#x307E;&#x305F;&#x3001;&#x6BD4;&#x8F03;&#x6F14;&#x7B97;&#x5B50;&#x3092;&#x8AD6;&#x7406;&#x6F14;&#x7B97;&#x5B50;&#x3067;&#x7D50;&#x5408;&#x3059;&#x308B;&#x5834;&#x5408;&#x3001;&#x9589;&#x3058;&#x305F;&#x7BC4;&#x56F2;&#x306B;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;</p>
+<pre><code>&#x2190;----&#x2510;           &#x250C;-----&#x2192;
+-----&#x25EF;-----------&#x25CF;------
+   1.0.0       3.0.0
+</code></pre><p>&#x306A;&#x3069;&#x306F;&#x8A31;&#x3055;&#x308C;&#x306A;&#x3044;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3067;&#x3059;&#x3002;</p>
+<p>(&#x3053;&#x306E;&#x8FBA;&#x308A;&#x306E;&#x8A71;&#x304C;&#x30D4;&#x30F3;&#x3068;&#x3053;&#x306A;&#x3044;&#x5834;&#x5408;&#x3067;&#x3082;&#x3001;&#x5B9F;&#x969B;&#x306B;&#x9069;&#x5F53;&#x306A;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3092;&#x6307;&#x5B9A;&#x3057;&#x3066;<code>poac install</code>&#x3092;&#x5B9F;&#x884C;&#x3059;&#x308B;&#x3068;&#x5168;&#x3066;&#x6559;&#x3048;&#x3066;&#x304F;&#x308C;&#x307E;&#x3059;&#x3002;)</p>
+<ul>
+<li>latest
+&#x3053;&#x308C;&#x3092;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x6642;&#x306F;&#x6700;&#x65B0;&#x306E;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x3092;&#x4F7F;&#x7528;&#x3057;&#x305F;&#x3044;&#x304C;&#x308F;&#x304B;&#x3089;&#x306A;&#x3044;&#x6642;&#x3067;&#x3059;&#xFF0E;<pre><code class="lang-yaml"><span class="hljs-attr">deps:</span>
+<span class="hljs-attr">poac:</span> latest
+</code></pre>
+poac install&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x5B9F;&#x884C;&#x5F8C;&#x306B;&#xFF0C;&#x81EA;&#x52D5;&#x7684;&#x306B;&#x5B58;&#x5728;&#x3059;&#x308B;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x306E;&#x7BC4;&#x56F2;&#x306B;&#x7F6E;&#x63DB;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;<pre><code class="lang-yaml"><span class="hljs-attr">deps:</span>
+<span class="hljs-attr">poac:</span> latest
+</code></pre>
+&#x7F6E;&#x63DB;&#x898F;&#x5247;&#x306F;&#xFF0C;command-specification.md&#x306B;&#x793A;&#x3057;&#x305F;&#xFF0C;--outside option &#x306B;&#x66F8;&#x304B;&#x308C;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x3068;&#x540C;&#x3058;&#x3067;&#x3059;&#xFF0E;</li>
+</ul>
+<p>&#x4EE5;&#x4E0A;&#x304C;&#x63D0;&#x4F9B;&#x3055;&#x308C;&#x308B;&#x6F14;&#x7B97;&#x5B50;&#x3067;&#x3059;&#xFF0E;</p>
+<p>&#x5B9F;&#x969B;&#x306B;&#x306F;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x6271;&#x3044;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">deps:</span>
+<span class="hljs-attr">  poac:</span> <span class="hljs-string">&quot;&gt;=0.1.0 and &lt;0.3.0&quot;</span>
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x3082;&#x66F8;&#x304F;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">deps:</span>
+<span class="hljs-attr">  poac:</span>
+<span class="hljs-attr">    version:</span> <span class="hljs-string">&quot;&gt;=0.1.0 and &lt;0.3.0&quot;</span>
+</code></pre>
+<p>&#x3053;&#x306E;&#x66F8;&#x304D;&#x65B9;&#x306F;&#x305D;&#x306E;&#x4E0B;&#x306B;&#x30D3;&#x30EB;&#x30C9;&#x624B;&#x9806;&#x3092;&#x8A18;&#x8F09;&#x3057;&#x305F;&#x3044;&#x6642;&#x306B;&#x4F7F;&#x7528;&#x3067;&#x304D;&#x307E;&#x3059;&#xFF0E;
+&#x57FA;&#x672C;&#x7684;&#x306B;&#x30D3;&#x30EB;&#x30C9;&#x304C;&#x5FC5;&#x8981;&#x306A;(&#x30D8;&#x30C3;&#x30C0;&#x30FC;&#x30AA;&#x30F3;&#x30EA;&#x30FC;&#x3067;&#x306A;&#x3044;)&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306F;&#xFF0C;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x3044;&#x306A;&#x304F;&#x3066;&#x3082;&#xFF0C;&#x63D0;&#x4F9B;&#x8005;&#x5074;&#x306E;poac.yml&#x306B;&#x8A18;&#x8F09;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#xFF0C;
+&#x305D;&#x3061;&#x3089;&#x3067;&#x30D3;&#x30EB;&#x30C9;&#x3067;&#x304D;&#x307E;&#x3059;&#xFF0E;&#x3057;&#x304B;&#x3057;&#xFF0C;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x7684;&#x306B;&#x4FE1;&#x983C;&#x3067;&#x304D;&#x306A;&#x304B;&#x3063;&#x305F;&#x308A;&#xFF0C;&#x4E00;&#x6642;&#x7684;&#x306B;&#x81EA;&#x5206;&#x306E;&#x65B9;&#x6CD5;&#x3067;&#x30D3;&#x30EB;&#x30C9;&#x3057;&#x305F;&#x3044;&#x6642;&#x306F;&#xFF0C;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">deps:</span>
+  boost/system:
+<span class="hljs-attr">    version:</span> <span class="hljs-string">&quot;&gt;=1.60.0 and &lt;1.70.0&quot;</span>
+<span class="hljs-attr">    build:</span> poac
+</code></pre>
+<p>&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x304F;&#x3068;&#xFF0C;&#x63D0;&#x4F9B;&#x8005;&#x5074;&#x3067;&#x306A;&#x304F;&#xFF0C;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x30EB;&#x30FC;&#x30C8;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x306B;&#x914D;&#x7F6E;&#x3057;&#x305F;poac.yml&#x306E;&#x30D3;&#x30EB;&#x30C9;&#x65B9;&#x6CD5;&#x304C;&#x512A;&#x5148;&#x3057;&#x3066;&#x9078;&#x629E;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;
+system: manual&#x304C;&#x5C06;&#x6765;&#x7684;&#x306B;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x308B;&#x3068;shell&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3092;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x304C;&#x3001;&#x30BB;&#x30AD;&#x30E5;&#x30EA;&#x30C6;&#x30A3;&#x3084;&#x305D;&#x306E;&#x4ED6;&#x96D1;&#x591A;&#x306A;&#x7406;&#x7531;&#x306B;&#x3088;&#x308A;&#x5B9F;&#x88C5;&#x306F;&#x5148;&#x5EF6;&#x3070;&#x3057;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x7684;&#x306B;&#x5927;&#x91CF;&#x306E;&#x4F9D;&#x5B58;&#x95A2;&#x4FC2;&#x3092;&#x3082;&#x3064;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x306B;&#x304A;&#x3044;&#x3066;&#x3001;&#x7B49;&#x5024;&#x5F0F;&#x3092;&#x7528;&#x3044;&#x308B;&#x3053;&#x3068;&#x306F;&#x73FE;&#x5B9F;&#x7684;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;
+&#x7B49;&#x5024;&#x5F0F;&#x3092;&#x983B;&#x7E41;&#x306B;&#x7528;&#x3044;&#x308B;&#x3068;&#x4F9D;&#x5B58;&#x95A2;&#x4FC2;&#x306E;&#x89E3;&#x6C7A;&#x306B;&#x5931;&#x6557;&#x3059;&#x308B;&#x53EF;&#x80FD;&#x6027;&#x304C;&#x3042;&#x308B;&#x304B;&#x3089;&#x3067;&#x3059;&#x3002;</p>
+<h5 id="dependency-from-github">Dependency from GitHub</h5>
+<pre><code class="lang-yaml"><span class="hljs-attr">deps:</span>
+  github/:user/:package:
+<span class="hljs-attr">    tag:</span> <span class="hljs-string">&quot;v0.1.2&quot;</span>
+    ...
+</code></pre>
+<p>&#x306E;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3059;&#x3002;</p>
+<p>header-only library&#x3092;github&#x304B;&#x3089;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3059;&#x308B;&#x5834;&#x5408;&#xFF0C;build&#x304C;&#x4E0D;&#x8981;&#x306A;&#x306E;&#x3067;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x3051;&#x308B;&#x3068;&#x4FBF;&#x5229;&#x3067;&#x3059;&#x304C;&#xFF0C;0.1.0&#x3067;&#x306F;&#x672A;&#x5BFE;&#x5FDC;&#x3067;&#x3059;&#xFF0E;&#x3058;&#x304D;&#x306B;&#x4FEE;&#x6B63;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">deps:</span>
+  github/:user/:package: <span class="hljs-string">&quot;v0.1.2&quot;</span>
+</code></pre>
+<p><em>src&#x304C;github&#x306E;&#x6642;&#x306B;&#x7BC4;&#x56F2;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x3082;&#x52D5;&#x4F5C;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;</em></p>
+<h5 id="dependencies-environment-&#x73FE;&#x72B6;&#x672A;&#x5B9F;&#x88C5;">Dependencies environment (&#x73FE;&#x72B6;&#x672A;&#x5B9F;&#x88C5;)</h5>
+<p>dependencies&#x306E;&#x7A2E;&#x985E;&#x306E;&#x6307;&#x5B9A;&#x306F;&#xFF0C;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">deps:</span>
+deps.dev:
+deps.test:
+</code></pre>
+<p>&#x306A;&#x306B;&#x3082;&#x6307;&#x5B9A;&#x3057;&#x306A;&#x3044;deps&#x306F;&#xFF0C;&#x5168;&#x3066;&#x306E;&#x74B0;&#x5883;&#x3092;&#x793A;&#x3057;&#x307E;&#x3059;&#x3002;
+&#x5185;&#x90E8;&#x7684;&#x306B;&#x306F;&#xFF0C;[ prod, dev, test ] &#x306E;&#x4E09;&#x3064;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#xFF0E;
+deps.prod&#x306F;&#x7528;&#x610F;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#xFF0E;production&#x6642;&#x306F;&#xFF0C;deps&#x306E;&#x307F;&#x304C;&#x9078;&#x629E;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;deps&#x306F;&#xFF0C;deps.prod&#x306E;&#x30A8;&#x30A4;&#x30EA;&#x30A2;&#x30B9;&#x3067;&#x306F;&#x306A;&#x304F;&#xFF0C;&#x5168;&#x3066;&#x306E;&#x74B0;&#x5883;&#x306B;&#x7F6E;&#x3044;&#x3066;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x308B;deps&#x3067;&#x3059;&#xFF0E;
+deps.dev&#x306F;&#xFF0C;&#x958B;&#x767A;&#x6642;&#x306B;&#x306E;&#x307F;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x3064;&#x307E;&#x308A;&#xFF0C;&#x57FA;&#x672C;&#x7684;&#x306A;&#x958B;&#x767A;&#x6642;&#x306B;&#x304A;&#x3044;&#x3066;&#x306F;&#xFF0C;deps&#x3068;deps.dev&#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;
+<!-- 開発時というのは，そのプロジェクト単体で使用する時で，
+そのパッケージが別のパッケージに依存される時には当てはまりません． --></p>
+<!-- 依存パッケージの依存パッケージ等は，depsのみが対応しています．
+その理由は，2階以上のパッケージに対して，developやtestは行わないためです． -->
+<p>&#x4E0B;&#x306B;&#x5E7E;&#x3064;&#x304B;&#x4F8B;&#x3092;&#x6319;&#x3052;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-bash">$ POAC_ENV=prod poac install
+</code></pre>
+<p>&#x3068;&#x3059;&#x308B;&#x3068;&#xFF0C;deps&#x306E;&#x307F;&#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;</p>
+<p>&#x4EE5;&#x4E0B;&#x306E;&#x306F;&#xFF0C;poac install&#x306E;&#x307F;&#x3068;&#x540C;&#x3058;&#x610F;&#x5473;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#xFF0E;
+&#x3064;&#x307E;&#x308A;&#xFF0C;&#x74B0;&#x5883;&#x5909;&#x6570;&#x3092;&#x6307;&#x5B9A;&#x305B;&#x305A;&#x306B;<code>poac install</code>&#x3068;&#x3059;&#x308B;&#x3068;&#xFF0C;&#x81EA;&#x52D5;&#x3067;POAC_ENV&#x306F;dev&#x306B;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-bash">$ POAC_ENV=dev poac install <span class="hljs-comment"># poac install&#x306E;&#x307F;&#x3068;&#x540C;&#x3058;&#x610F;&#x5473;(semantics)&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;</span>
+</code></pre>
+<p>&#x3068;&#x3059;&#x308B;&#x3068;&#xFF0C;deps&#x3068;deps.dev&#x304C;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;</p>
+<p>POAC_ENV&#x3068;&#x3044;&#x3046;&#x74B0;&#x5883;&#x5909;&#x6570;&#x3092;&#x8A2D;&#x5B9A;&#x3059;&#x308B;&#x3068;&#xFF0C;
+&#x305D;&#x306E;&#x74B0;&#x5883;&#x306B;&#x8A2D;&#x5B9A;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;
+&#x6307;&#x5B9A;&#x53EF;&#x80FD;&#x306A;&#x306E;&#x306F;&#xFF0C;&#x4E0A;&#x8A18;&#x3057;&#x305F;&#x4E09;&#x3064;&#x306E;&#x74B0;&#x5883;&#x3067;&#x3059;&#xFF0E;</p>
+<pre><code class="lang-bash">$ POAC_ENV=prod poac install
+</code></pre>
+<h4 id="cppversion">cpp_version</h4>
+<p>cpp_version&#x306F;&#xFF0C;&#x5185;&#x90E8;&#x3067;&#x306F;Int&#x578B;&#x3068;&#x3057;&#x3066;&#x6271;&#x3044;&#x307E;&#x3059;&#xFF0E;
+&#x305D;&#x306E;&#x305F;&#x3081;&#xFF0C;03&#x3068;3&#x306F;&#x540C;&#x5024;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x304C;&#xFF0C;
+Web&#x30B5;&#x30A4;&#x30C8;&#x306A;&#x3069;&#x3067;&#x306E;&#x8868;&#x793A;&#x306B;&#x304A;&#x3044;&#x3066;&#x306F;&#xFF0C;03&#x3068;&#x8868;&#x8A18;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;(&#x73FE;&#x72B6;&#x672A;&#x5BFE;&#x5FDC;)</p>
+<h4 id="owners">owners</h4>
+<p>owners&#x306B;&#x306F;&#xFF0C;poac.pm &#x306B;Signup&#x3057;&#x305F;&#x306E;&#x3061;&#xFF0C;GitHub&#x306E;User ID&#x3092;&#x6307;&#x5B9A;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;&#xFF0E;
+publish&#x6642;&#x306B;token&#x306E;&#x6240;&#x6709;&#x8005;&#x3067;&#x3042;&#x308B;&#x304B;&#x3069;&#x3046;&#x304B;&#x3082;&#x691C;&#x8A3C;&#x3055;&#x308C;&#x307E;&#x3059;&#xFF0E;</p>
+<!-- TODO: buildや他のKEY -->
+<!-- #### See Also
+[setting-file.md] -->
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="introduce-to-existing-projects.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 2.2. 既存のプロジェクトに使用する">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.3. 設定ファイル","level":"1.3.3","depth":2,"previous":{"title":"2.2. 既存のプロジェクトに使用する","level":"1.3.2","depth":2,"path":"guide/introduce-to-existing-projects.md","ref":"guide/introduce-to-existing-projects.md","articles":[]},"dir":"ltr"},"config":{"plugins":["advanced-emoji"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"advanced-emoji":{"embedEmojis":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"The Poac Book","language":"ja","gitbook":"*"},"file":{"path":"guide/setting-file.md","mtime":"2019-01-30T20:33:11.376Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T20:33:40.899Z"},"basePath":"..","book":{"language":"ja"}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
