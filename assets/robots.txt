@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://docs.poac.io/sitemap.xml
