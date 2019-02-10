@@ -14,12 +14,9 @@
   "author": "matken11235",
   "license": "ISC",
   "dependencies": {
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^1.2.0",
     "gitbook-cli": "^2.3.2",
-    "gitbook-plugin-advanced-emoji": "^0.2.2",
-    "gitbook-plugin-github-buttons": "^3.0.0",
-    "gitbook-plugin-robotstxt": "^1.0.0",
-    "gitbook-plugin-sitemap": "^1.2.0"
+    "gitbook-plugin-advanced-emoji": "^0.2.2"
   },
   "private": true
 }
