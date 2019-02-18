@@ -20,5 +20,11 @@
 <url> <loc>https://docs.poac.io/ja/guide/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://docs.poac.io/ja/guide/creating-a-new-project.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://docs.poac.io/ja/guide/introduce-to-existing-projects.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
-<url> <loc>https://docs.poac.io/ja/guide/setting-file.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://docs.poac.io/ja/guide/config-file.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://docs.poac.io/ja/reference/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://docs.poac.io/ja/reference/api.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://docs.poac.io/ja/architecture/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://docs.poac.io/ja/roadmap/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://docs.poac.io/ja/roadmap/client-side.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://docs.poac.io/ja/roadmap/server-side.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
